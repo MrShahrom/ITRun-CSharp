@@ -1,0 +1,14 @@
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\bin\Debug\net9.0\ITRunApp.exe
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\bin\Debug\net9.0\ITRunApp.deps.json
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\bin\Debug\net9.0\ITRunApp.runtimeconfig.json
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\bin\Debug\net9.0\ITRunApp.dll
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\bin\Debug\net9.0\ITRunApp.pdb
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.AssemblyInfoInputs.cache
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.AssemblyInfo.cs
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.csproj.CoreCompileInputs.cache
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.dll
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\refint\ITRunApp.dll
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.pdb
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.genruntimeconfig.cache
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ref\ITRunApp.dll
