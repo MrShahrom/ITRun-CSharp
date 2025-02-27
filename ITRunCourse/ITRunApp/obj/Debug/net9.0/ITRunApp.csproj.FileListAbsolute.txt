@@ -12,3 +12,4 @@ D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\refint\ITRunApp.dll
 D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.pdb
 D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.genruntimeconfig.cache
 D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ref\ITRunApp.dll
+D:\ITRun-CSharp\ITRunCourse\ITRunApp\obj\Debug\net9.0\ITRunApp.sourcelink.json
