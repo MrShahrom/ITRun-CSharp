@@ -1,13 +1,6 @@
 namespace ITRunApp.Models;
 
-enum Operation
-{
-    Add = '+',
-    Subtract = '-',
-    Multiply = '*',
-    Divide = '/'
-}
-public class Calculator
+public partial class Calculator
 {
     public double Sum(double num1, double num2)
     {
@@ -18,7 +11,9 @@ public class Calculator
     {
         return num1 - num2;
     }
-
+}
+public partial class Calculator
+{
     public double Divide(double num1, double num2)
     {
         if (num2 == 0)
