@@ -1,4 +1,4 @@
-﻿using ITRunApp.Models;
+﻿
 
 // Console.Write("Enter your name: ");
 // string urName = Console.ReadLine();
@@ -57,7 +57,6 @@
            Console.WriteLine($"{num1} {value} {num2} = {result}");
            break;
    }*/
-
 
 while (true)
 {
