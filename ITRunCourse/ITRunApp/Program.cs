@@ -1,76 +1,43 @@
 ﻿
-
-// Console.Write("Enter your name: ");
-// string urName = Console.ReadLine();
-// Console.WriteLine($"Hello, {urName} ");
-
-/*   Console.Write("Input firstNumber: ");
-   double num1 = double.Parse(Console.ReadLine());
-   Console.Write("Input secondNumber: ");
-   double num2 = double.Parse(Console.ReadLine());
-
-   Console.Write("Input expression: ");
-   double result = 0.0;
-   char value = char.Parse(Console.ReadLine());
-
-   double Sum(double num1, double num2)
-   {
-       return num1 + num2;
-   }
-
-   double Minus(double num1, double num2)
-   {
-       return num1 - num2;
-   }
-
-   double Devide(double num1, double num2)
-   {
-       return num1 / num2;
-   }
-
-   double Multiply(double num1, double num2)
-   {
-       return num1 * num2;
-   }
-
-   switch (value)
-   {
-       case '+':
-           result = Sum(num1, num2);
-           Console.WriteLine($"{num1} {value} {num2} = {result}");
-           break;
-       case '-':
-           result = Minus(num1, num2);
-           Console.WriteLine($"{num1} {value} {num2} = {result}");
-           break;
-       case '*':
-           result = Multiply(num1, num2);
-           Console.WriteLine($"{num1} {value} {num2} = {result}");
-           break;
-       case '/':
-           result = Devide(num1, num2);
-           if (num2 == 0)
-           {
-               Console.WriteLine("Cannot divide by zero");
-               break;
-           }
-           Console.WriteLine($"{num1} {value} {num2} = {result}");
-           break;
-   }*/
-
 while (true)
 {
-    Console.Write("Input first number: ");
-    double num1 = double.Parse(Console.ReadLine());
-
-    Console.Write("Input second number: ");
-    double num2 = double.Parse(Console.ReadLine());
+    double num1;
+    double num2;
     char operationChar = ' ';
     
     while (true)
     {
+        Console.Write("Input first number: ");
+        try
+        {
+            num1 = double.Parse(Console.ReadLine());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Please enter a number!");
+            continue;
+        }
+        break;
+    }
+    
+    while (true)
+    {
+        Console.Write("Input second number: ");
+        try
+        {
+            num2 = double.Parse(Console.ReadLine());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Please enter a number!");
+            continue;
+        }
+        break;
+    }
+    
+    while (true)
+    {
         Console.Write("Input operation (+, -, *, /): ");
-
         try
         {
             operationChar = char.Parse(Console.ReadLine());
