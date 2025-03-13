@@ -4,102 +4,116 @@
 // string urName = Console.ReadLine();
 // Console.WriteLine($"Hello, {urName} ");
 
- /*   Console.Write("Input firstNumber: ");
-    double num1 = double.Parse(Console.ReadLine());
-    Console.Write("Input secondNumber: ");
-    double num2 = double.Parse(Console.ReadLine());
-    
-    Console.Write("Input expression: ");
-    double result = 0.0;
-    char value = char.Parse(Console.ReadLine());
-    
-    double Sum(double num1, double num2)
-    {
-        return num1 + num2;
-    }
-    
-    double Minus(double num1, double num2)
-    {
-        return num1 - num2;
-    }
-    
-    double Devide(double num1, double num2)
-    {
-        return num1 / num2;
-    }
-    
-    double Multiply(double num1, double num2)
-    {
-        return num1 * num2;
-    }
-    
-    switch (value)
-    {
-        case '+':
-            result = Sum(num1, num2);
-            Console.WriteLine($"{num1} {value} {num2} = {result}");
-            break;
-        case '-':
-            result = Minus(num1, num2);
-            Console.WriteLine($"{num1} {value} {num2} = {result}");
-            break;
-        case '*':
-            result = Multiply(num1, num2);
-            Console.WriteLine($"{num1} {value} {num2} = {result}");
-            break;
-        case '/':
-            result = Devide(num1, num2);
-            if (num2 == 0)
-            {
-                Console.WriteLine("Cannot divide by zero");
-                break;
-            }
-            Console.WriteLine($"{num1} {value} {num2} = {result}");
-            break;
-    }*/
-   
+/*   Console.Write("Input firstNumber: ");
+   double num1 = double.Parse(Console.ReadLine());
+   Console.Write("Input secondNumber: ");
+   double num2 = double.Parse(Console.ReadLine());
 
-Calculator calculator = new Calculator();
+   Console.Write("Input expression: ");
+   double result = 0.0;
+   char value = char.Parse(Console.ReadLine());
+
+   double Sum(double num1, double num2)
+   {
+       return num1 + num2;
+   }
+
+   double Minus(double num1, double num2)
+   {
+       return num1 - num2;
+   }
+
+   double Devide(double num1, double num2)
+   {
+       return num1 / num2;
+   }
+
+   double Multiply(double num1, double num2)
+   {
+       return num1 * num2;
+   }
+
+   switch (value)
+   {
+       case '+':
+           result = Sum(num1, num2);
+           Console.WriteLine($"{num1} {value} {num2} = {result}");
+           break;
+       case '-':
+           result = Minus(num1, num2);
+           Console.WriteLine($"{num1} {value} {num2} = {result}");
+           break;
+       case '*':
+           result = Multiply(num1, num2);
+           Console.WriteLine($"{num1} {value} {num2} = {result}");
+           break;
+       case '/':
+           result = Devide(num1, num2);
+           if (num2 == 0)
+           {
+               Console.WriteLine("Cannot divide by zero");
+               break;
+           }
+           Console.WriteLine($"{num1} {value} {num2} = {result}");
+           break;
+   }*/
+
+
 while (true)
 {
     Console.Write("Input first number: ");
     double num1 = double.Parse(Console.ReadLine());
-        
+
     Console.Write("Input second number: ");
     double num2 = double.Parse(Console.ReadLine());
-        
-    Console.Write("Input operation (+, -, *, /): ");
-    char operationChar = char.Parse(Console.ReadLine());
-
-    if (!Enum.IsDefined(typeof(Operation), (int)operationChar))
+    char operationChar = ' ';
+    
+    while (true)
     {
-        Console.WriteLine("Invalid operation");
-        return;
-    }
+        Console.Write("Input operation (+, -, *, /): ");
 
+        try
+        {
+            operationChar = char.Parse(Console.ReadLine());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Please input only one symbol!");
+            continue;
+        }
+        
+        if (!Enum.IsDefined(typeof(Operation), (int)operationChar))
+        {
+            Console.WriteLine("Please input operation (+, -, *, /)!");
+            continue;
+        }
+        break;
+    }
+    
     Operation operation = (Operation)operationChar;
     double result = 0.0;
-        
+
     try
     {
         switch (operation)
         {
             case Operation.Add:
-                result = calculator.Sum(num1, num2);
+                result = Calculator.Sum(num1, num2);
                 break;
             case Operation.Subtract:
-                result = calculator.Subtract(num1, num2);
+                result = Calculator.Subtract(num1, num2);
                 break;
             case Operation.Multiply:
-                result = calculator.Multiply(num1, num2);
+                result = Calculator.Multiply(num1, num2);
                 break;
             case Operation.Divide:
-                result = calculator.Divide(num1, num2);
+                result = Calculator.Divide(num1, num2);
                 break;
             default:
                 Console.WriteLine("Invalid operation");
                 return;
         }
+
         Console.WriteLine($"{num1} {operationChar} {num2} = {result}");
     }
     catch (Exception ex)
@@ -107,4 +121,3 @@ while (true)
         Console.WriteLine(ex.Message);
     }
 }
-
