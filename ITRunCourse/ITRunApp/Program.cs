@@ -57,28 +57,13 @@ while (true)
     }
     
     Operation operation = (Operation)operationChar;
-    double result = 0.0;
+    // double result = 0.0;
 
     try
     {
-        switch (operation)
-        {
-            case Operation.Add:
-                result = Calculator.Sum(num1, num2);
-                break;
-            case Operation.Subtract:
-                result = Calculator.Subtract(num1, num2);
-                break;
-            case Operation.Multiply:
-                result = Calculator.Multiply(num1, num2);
-                break;
-            case Operation.Divide:
-                result = Calculator.Divide(num1, num2);
-                break;
-            default:
-                Console.WriteLine("Invalid operation");
-                return;
-        }
+        Calculator.CalculatorOperation selectedOperation = Calculator.GetOperation(operation);
+                    
+        double result = selectedOperation(num1, num2);
 
         Console.WriteLine($"{num1} {operationChar} {num2} = {result}");
     }
